@@ -1,7 +1,24 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Nurgiz
- * Date: 19.10.2018
- * Time: 22:53
- */
+
+function calculator ($x, $operations, $y) {
+    switch ($operations) {
+        case 'add':
+            return $x + $y;
+            break;
+        case 'sub':
+            return $x - $y;
+            break;
+        case 'div':
+            if ($y == 0) {
+                return 'Деление на ноль невозможно!';
+            } else {
+                return $x / $y;
+            }
+            break;
+        case 'multi':
+            return $x * $y;
+            break;
+        default:
+            return false;
+    }
+}
